@@ -86,7 +86,7 @@ public class main {
                     break;
 
                 case "4":
-
+                    menu = false;
                     break;
 
             }
