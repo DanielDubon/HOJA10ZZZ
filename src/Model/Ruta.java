@@ -22,6 +22,8 @@ public class Ruta {
     }
 
 
+
+
     public void setDestino(Ciudad destino) {
         this.destino = destino;
     }

@@ -30,5 +30,14 @@ public class Ciudad {
         return rutas;
     }
 
+    public Ruta getRuta(Ciudad ciudadDestino) {
+        for (Ruta ruta : rutas) {
+            if (ruta.getDestino().equals(ciudadDestino)) {
+                return ruta;
+            }
+        }
+        return null; // Devuelve null si no se encuentra la ruta
+    }
+
 
 }

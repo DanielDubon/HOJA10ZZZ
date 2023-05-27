@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 import static Controller.ReadFile.leerArchivo;
-import static Controller.controller.rutaMasCorta;
+import static Controller.controller.*;
 
 public class main {
     private static boolean menu = true;
@@ -45,8 +45,8 @@ public class main {
             System.out.println("¿Que desea realizar?");
             System.out.println("1) Calcular distancia entre ciudades");
             System.out.println("2) Actualizar trafico encontrado entre ciudades");
-            System.out.println("3) Actualizar trafico encontrado entre ciudades");
-            System.out.println("4) Actualizar clima encontrado entre ciudades");
+            System.out.println("3) Cual es la ciudad central" );
+            System.out.println("4) Finalizar");
             String opcion = scanner.nextLine();
             switch (opcion){
 
@@ -62,10 +62,26 @@ public class main {
                     break;
 
                 case "2":
-
+                    System.out.println("Ciudad 1:");
+                    String ciudad1 = scanner.nextLine();
+                    System.out.println("Ciudad 2:");
+                    String ciudad2 = scanner.nextLine();
+                    System.out.println("Nuevo tiempo normal:");
+                    int tiempoNormal = scanner.nextInt();
+                    System.out.println("Nuevo tiempo con lluvia:");
+                    int tiempoLluvia = scanner.nextInt();
+                    System.out.println("Nuevo tiempo con nieve:");
+                    int tiempoNieve = scanner.nextInt();
+                    System.out.println("Nuevo tiempo con tormenta:");
+                    int tiempoTormenta = scanner.nextInt();
+                    scanner.nextLine();
+                    actualizarTrafico(ciudad1, ciudad2, tiempoNormal, tiempoLluvia, tiempoNieve, tiempoTormenta);
                     break;
 
                 case "3":
+
+                    String ciudadCentral = encontrarCiudadCentral();
+                    System.out.println("La ciudad central del grafo es: " + ciudadCentral);
 
                     break;
 
